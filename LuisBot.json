@@ -1,0 +1,317 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "CalendarAssistant",
+  "desc": "Assist associates in scheduling meetings",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "Calendar.Add",
+      "inherits": {
+        "domain_name": "Calendar",
+        "model_name": "Add"
+      }
+    },
+    {
+      "name": "Greeting"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "ScheduleMeeting"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Calendar.Contact"
+    },
+    {
+      "name": "Calendar.Date"
+    },
+    {
+      "name": "Calendar.Location",
+      "inherits": {
+        "domain_name": "Calendar",
+        "model_name": "Location"
+      }
+    },
+    {
+      "name": "Calendar.Subject",
+      "inherits": {
+        "domain_name": "Calendar",
+        "model_name": "Subject"
+      }
+    },
+    {
+      "name": "Calendar.Time"
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [],
+  "actions": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "hello",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "howdy",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "schedule meeting with carol tomorrow in alexandria",
+      "intent": "ScheduleMeeting",
+      "entities": [
+        {
+          "entity": "Calendar.Contact",
+          "startPos": 22,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "Add a new event on 27-Apr",
+      "intent": "Calendar.Add",
+      "entities": []
+    },
+    {
+      "text": "save the date may 17 pictures party",
+      "intent": "Calendar.Add",
+      "entities": [
+        {
+          "entity": "Calendar.Subject",
+          "startPos": 21,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "schedule appointment for tomorrow please",
+      "intent": "Calendar.Add",
+      "entities": [
+        {
+          "entity": "Calendar.Subject",
+          "startPos": 9,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "Meeting My Manager",
+      "intent": "Calendar.Add",
+      "entities": [
+        {
+          "entity": "Calendar.Subject",
+          "startPos": 0,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "Add tomorrow's breakfast by 10 AM",
+      "intent": "Calendar.Add",
+      "entities": []
+    },
+    {
+      "text": "calendar i'll be at the garage from 8 till 3 this saturday",
+      "intent": "Calendar.Add",
+      "entities": [
+        {
+          "entity": "Calendar.Location",
+          "startPos": 17,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "The meeting will last for one hour",
+      "intent": "Calendar.Add",
+      "entities": []
+    },
+    {
+      "text": "Add an event to visit 209 Nashville Gym",
+      "intent": "Calendar.Add",
+      "entities": [
+        {
+          "entity": "Calendar.Location",
+          "startPos": 26,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "Add imax theater to my upcoming events",
+      "intent": "Calendar.Add",
+      "entities": [
+        {
+          "entity": "Calendar.Subject",
+          "startPos": 4,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "897 pancake house on Tuesday 1:00 pm please",
+      "intent": "Calendar.Add",
+      "entities": [
+        {
+          "entity": "Calendar.Location",
+          "startPos": 0,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "dsw shoes 7804 on Monday 3:00 pm",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Calendar.Location",
+          "startPos": 0,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "dunmore pa sonic sounds Friday morning please",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Calendar.Location",
+          "startPos": 0,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "Meet Kiel at hallmark cards 405 Saturday 2:00 pm",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Calendar.Location",
+          "startPos": 13,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "Make dinner plans at restaurant at 8pm.",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Calendar.Location",
+          "startPos": 21,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "Visit 209 Nashville Gym tomorrow morning",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Calendar.Location",
+          "startPos": 10,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "Add to my calender daddy daughter dance at meadowbrook",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Calendar.Location",
+          "startPos": 43,
+          "endPos": 53
+        }
+      ]
+    },
+    {
+      "text": "Add to Tuesday's calender visting milos bar tequila",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Calendar.Location",
+          "startPos": 17,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "I want to reschedule the meeting at the air force club",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Calendar.Subject",
+          "startPos": 25,
+          "endPos": 53
+        }
+      ]
+    },
+    {
+      "text": "Add a new task finish assignment",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Calendar.Subject",
+          "startPos": 15,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "Move the BBQ party to Friday",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "Calendar.Subject",
+          "startPos": 9,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "please schedule a meeting about nascardays with toddstuck at 2701 for today at 2pm",
+      "intent": "Calendar.Add",
+      "entities": [
+        {
+          "entity": "Calendar.Time",
+          "startPos": 79,
+          "endPos": 81
+        },
+        {
+          "entity": "Calendar.Subject",
+          "startPos": 32,
+          "endPos": 41
+        },
+        {
+          "entity": "Calendar.Date",
+          "startPos": 70,
+          "endPos": 74
+        },
+        {
+          "entity": "Calendar.Location",
+          "startPos": 61,
+          "endPos": 64
+        },
+        {
+          "entity": "Calendar.Contact",
+          "startPos": 48,
+          "endPos": 56
+        }
+      ]
+    }
+  ]
+}
